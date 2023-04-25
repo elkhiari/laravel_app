@@ -9,7 +9,14 @@ use Validator;
 
 class ClientController extends Controller
 {
-    public function index(){
+
+    protected function index()
+    {
+        $client = client::orderBy('id','asc')->paginate(10);
+        return view('clients.index' ,compact('client'));
+    }
+
+    public function getall(){
         $client = client::all();
         if ($client == null) {
           return response()->json([

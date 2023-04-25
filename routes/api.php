@@ -18,7 +18,7 @@ use App\Http\Controllers\ClientController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/client', [ClientController::class, 'index']);
+Route::get('/client', [ClientController::class, 'getall']);
 Route::put('/client/{id}', [ClientController::class, 'update']);
 Route::post('/client', [ClientController::class, 'store']);
 Route::delete('/client/{id}', [ClientController::class, 'destroy']);

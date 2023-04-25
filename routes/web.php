@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProduitsController;
+use App\Http\Controllers\ClientController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,3 +19,4 @@ use App\Http\Controllers\ProduitsController;
 // });
 
 Route::resource('produits',ProduitsController::class);
+Route::resource('clients',ClientController::class);
